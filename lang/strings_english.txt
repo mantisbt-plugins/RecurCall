@@ -1,0 +1,20 @@
+<?php
+	$s_plugin_recurcall_title				= "Recurring Calls";
+	$s_plugin_recurcall_description			= "Enable recurring calls within Mantis";
+	$s_plugin_recurcall_config				= "Configuration";
+	$s_plugin_recurcall_action_status		= "Status upon which a new call is created";
+	$s_plugin_recurcall_next_status			= "Status for the new call";
+	$s_plugin_recurcall_custom				= "Copy Custom Fields";
+	$s_plugin_recurcall_relations			= "Copy Relations Fields";
+	$s_plugin_recurcall_files				= "Copy Attachments";	
+	$s_plugin_recurcall_history				= "Copy History";
+	$s_plugin_recurcall_notes				= "Copy Notes";
+	$s_plugin_recurcall_monitor				= "Copy Users monitoring call";
+	$s_plugin_recurcall_week				= "Number of working days for a week";
+	$s_plugin_recurcall_month				= "Number of working days for a month";
+	$s_plugin_recurcall_quarter				= "Number of working days for a quarter";
+	$s_plugin_recurcall_half				= "Number of working days for half a year";
+	$s_plugin_recurcall_full				= "Number of working days for a full year";
+	$s_plugin_recurcall_enabled				= "Yes";
+	$s_plugin_recurcall_disabled			= "No";
+	$s_plugin_change_create					= "Change Create Date";

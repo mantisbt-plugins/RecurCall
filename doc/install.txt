@@ -1,0 +1,89 @@
+########################################################
+# 	Mantis Bugtracker Add-On
+# 	RecurCall Version 2.03
+#	2010-2020 plugin by Cas Nuy www.NUY.info
+########################################################
+
+This plugin incorporates recurring "calls" into Mantis.
+The field "severity" is renamed to "Call Type" and in addition to the existing definition, 6 types are added :
+74:Daily Recurring task
+75:Weekly Recurring task
+76:Monthly Recurring task
+77:Quarterly Recurring task
+78:Half-yearly Recurring task
+79:Yearly Recurring task
+If a call (issue) in the system reaches a predefined Status (default: resolved), 
+it creates a new call, again with a predefined status(default: assigned).
+It then sets a new duedate based upon call type, ie type=76, it adds one month to the duedate. 
+It does work only with the standard working days which means that a month is defined as 22 working days.
+
+********************************************************************************************
+* Installation                                                                             *
+********************************************************************************************
+Like any other plugin. 
+After copying to your webserver :
+- Start mantis as administrator
+- Select manage
+- Select manage Plugins
+- Select Install behind RecurCall 1.0
+- Once installed, click on the plugin-name for further configuration.
+
+In addition to installing the plugin itself, one needs to make some changes to 2 files.
+So the next step is making these changes:
+in config_inc.php we need to define these new definitions:
+$g_severity_enum_string = '10:Minor Change,20:Major Change,30:Request,40:tweak,50:Minor Issue,60:Major Issue,70:crash,74:Daily Recurring task,75:Weekly Recurring task,76:Monthly Recurring task,77:Quarterly Recurring task,78:Half-yearly Recurring task,79:Yearly Recurring task,80:block,90:Not Applicable';
+
+This also needs to be done in custom_strings_inc.php(if file not exists, please create):
+$s_severity_enum_string = '10:Minor Change,20:Major Change,30:Request,40:tweak,50:Minor Issue,60:Major Issue,70:crash,74:Daily Recurring task,75:Weekly Recurring task,76:Monthly Recurring task,77:Quarterly Recurring task,78:Half-yearly Recurring task,79:Yearly Recurring task,80:block,90:Not Applicable';
+
+For renaming "severity" to "Call Type", we need the following overrides, again in custom_strings_inc.php:
+$s_severity = 'Call Type';
+$s_graph_imp_severity_title = 'Synthesis graphs by Call Type';
+$s_by_severity_pct = 'by Call Type percentage';
+$s_by_severity_mix = 'by Call Type and status';
+$s_severity_link = 'Per Call Type';
+$s_email_severity = 'Call Type';
+$s_with_minimum_severity = 'With Minimum Call Type of';
+$s_must_enter_severity = 'You must select a Call Type';
+$s_select_severity = 'Select Call Type';
+$s_by_severity = 'By Call Type';
+
+For version 1.2.1 make sure to have this statement in confg_inc.php:
+$g_path          = 'http://path to your mantis installation/';
+
+That should be all
+
+********************************************************************************************
+Configuration options                                                                      *
+********************************************************************************************
+The plugin allows for defining the following:
+Take action on which status:			'action_status'	 	=> RESOLVED,
+What needs to be the new status:		'next_status'	 	=> ASSIGNED,
+Copy Custom fields:						'copy_custom'    	=> true,
+Copy Relationships:						'copy_relations' 	=> false,
+Copy History:							'copy_his'       	=> false,
+Copy attachments:						'copy_files'	 	=> false,
+Copy notes:								'copy_notes'		=> false,
+Copy users monitoring:					'copy_monitor'		=> true,
+Week working days:						'week_work_days' 	=> 5,
+Month work days:						'month_work_days'	=> 22,
+Quarter work days						'quarter_work_days'	=> 65,
+Half year work days						'half_work_days' 	=> 130,
+Full year work days						'full_work_days' 	=> 260,
+Change create date						'change_create'		=> false,
+********************************************************************************************
+License                                                                                    *
+********************************************************************************************
+This plugin is distributed under the same conditions as Mantis itself.
+
+********************************************************************************************
+Mantis Issue                                                                               *
+********************************************************************************************
+http://www.mantisbt.org/bugs/view.php?id= 12533
+
+********************************************************************************************
+Greetings                                                                                  *
+********************************************************************************************
+Cas Nuy 
+cas@nuy.info
+http://www.nuy.info
