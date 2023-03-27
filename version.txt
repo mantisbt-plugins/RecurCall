@@ -1,0 +1,3 @@
+Version: 2.03 #
+Devurl: https://github.com/mantisbt-plugins/RecurrCall/blob/main/version.txt #
+Location: https://github.com/mantisbt-plugins/RecurrCall/archive/refs/heads/main.zip #
