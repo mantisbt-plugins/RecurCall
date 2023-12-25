@@ -1,9 +1,9 @@
 <?php
-	auth_reauthenticate();
-	access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
-	layout_page_header( lang_get( 'plugin_recurcall_title' ) );
+auth_reauthenticate();
+access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
+layout_page_header( lang_get( 'plugin_recurcall_title' ) );
 layout_page_begin( 'config_page.php' );
-	print_manage_menu();
+print_manage_menu();
 ?>
 <div class="col-md-12 col-xs-12">
 <div class="space-10"></div>
@@ -79,7 +79,6 @@ layout_page_begin( 'config_page.php' );
 			</td>
 		</tr>
 
-
 		<tr >
 			<td class="category">
 				<?php echo lang_get( 'plugin_recurcall_history' ) ?>
@@ -127,7 +126,6 @@ layout_page_begin( 'config_page.php' );
 				<?php echo lang_get( 'plugin_recurcall_disabled' ) ?></label>
 			</td>
 		</tr>
-		
 		
 		<tr >
 			<td class="category" width="60%">

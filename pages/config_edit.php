@@ -1,5 +1,4 @@
 <?php
-
 # authenticate
 auth_reauthenticate();
 access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );

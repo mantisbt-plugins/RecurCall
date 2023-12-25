@@ -7,7 +7,7 @@ class recurCallPlugin extends MantisPlugin {
 		$this->name = 'RecurCall';    
 		$this->description = 'Ability to use recurring calls';    
 		$this->page = 'config';           
-		$this->version = '2.03';     
+		$this->version = '2.10';     
 		$this->requires = array( 'MantisCore' => '2.0.0', );
 		$this->author = 'Cas Nuy';        
 		$this->contact = '';       
@@ -88,6 +88,6 @@ class recurCallPlugin extends MantisPlugin {
 				}
 			}
 		}
-		return $p_bug_data;
+		return $t_bug_data;
 	}
 }

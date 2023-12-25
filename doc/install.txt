@@ -1,7 +1,7 @@
 ########################################################
 # 	Mantis Bugtracker Add-On
-# 	RecurCall Version 2.03
-#	2010-2020 plugin by Cas Nuy www.NUY.info
+# 	RecurCall Version 2.10
+#	2010-2023 plugin by Cas Nuy www.NUY.info
 ########################################################
 
 This plugin incorporates recurring "calls" into Mantis.
