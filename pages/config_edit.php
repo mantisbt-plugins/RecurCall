@@ -37,4 +37,4 @@ plugin_config_set( 'full_work_days', $f_full_work_days );
 plugin_config_set( 'change_create', $f_change_create );
 form_security_purge( 'plugin_recurcall_config_update' );
 # redirect
-print_successful_redirect( plugin_page( 'config', true ) );
+print_header_redirect( plugin_page( 'config', true ) );

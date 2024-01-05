@@ -3,3 +3,4 @@ Version 1.02	03-10-2012		Added option to override creationdate of issue
 Version 2.01	24-01-2017		Compatible with Mantis 2.x
 Version 2.03	08-12-2020		Improved compatibility
 Version 2.10	25-12-2023		Reviewed for warnings (deprecated issues etcetera)
+Version 2.11	07-01-2024		replaced print_successful_redirect()
