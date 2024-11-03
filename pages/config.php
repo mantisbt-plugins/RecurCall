@@ -14,7 +14,7 @@ print_manage_menu();
 <div class="widget-header widget-header-small">
 	<h4 class="widget-title lighter">
 		<i class="ace-icon fa fa-text-width"></i>
-		<?php echo lang_get( 'plugin_recurcall_title' ) . ': ' . lang_get( 'plugin_format_config' )?>
+		<?php echo lang_get( 'plugin_recurcall_title' ) . ': ' . lang_get( 'plugin_recurcall_config' )?>
 	</h4>
 </div>
 <div class="widget-body">
